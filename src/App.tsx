@@ -18,6 +18,14 @@ function App() {
           micro-animations in them.
         </StyledContentDescription>
       </StyledContent>
+      <StyledButtonsGroup>
+        <StyledButtonCard>
+          <ProcessingButton />
+        </StyledButtonCard>
+        <StyledButtonCard>
+          <HoldToDeleteButton />
+        </StyledButtonCard>
+      </StyledButtonsGroup>
     </StyledContainer>
   );
 }
@@ -50,4 +58,20 @@ const StyledContentDescription = styled.div<{ stagger: number }>`
   color: var(--info);
   line-height: 30px;
   --stagger: ${(props) => props.stagger};
+`;
+
+const StyledButtonsGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-wrap: true;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+`;
+
+const StyledButtonCard = styled.div`
+  width: 100%;
+  height: 250px;
+  background-color: #fafafa;
+  border-radius: 10px;
 `;
