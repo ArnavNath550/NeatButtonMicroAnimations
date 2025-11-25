@@ -9,6 +9,8 @@
 }
 
 :root {
+    --text: #2d2d2d;
+    --info: #646464;
     --primary: #f46132;
     --primaryLighter: #f9774d;
     --primaryDarker: #de4817;
@@ -50,4 +52,38 @@ body {
 #root {
     width: 100%;
     height: 100%;
+}
+
+[basics-prose] p [basics-text] {
+    font-feature-settings: "kern", "frac", "kern", "ss02";
+    margin: 0px;
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    [data-animate] {
+        animation: enter 0.6s ease both;
+        animation-delay: calc(var(--stagger) * var(--delay));
+    }
+}
+
+[data-animate] {
+    --stagger: 0;
+    --delay: 120ms;
+    --start: 0ms;
+}
+
+[basics-text] {
+    margin: 0px;
 }
