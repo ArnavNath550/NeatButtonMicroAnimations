@@ -199,7 +199,7 @@ const ContentRow = styled(motion.div)`
 
 const TrashIcon = styled.svg`
   width: 26px;
-  height: 26px;
+  height: 18px;
   color: white;
   display: block;
 `;

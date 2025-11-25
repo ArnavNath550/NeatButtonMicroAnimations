@@ -21,7 +21,7 @@ function App() {
           micro-animations in them.
         </StyledContentDescription>
       </StyledContent>
-      <StyledButtonsGroup>
+      <StyledButtonsGroup stagger={2} data-animate>
         <StyledButtonCard>
           <ProcessingButton />
         </StyledButtonCard>
@@ -81,12 +81,12 @@ const StyledContentDescription = styled.div<{ stagger: number }>`
   }
 `;
 
-const StyledButtonsGroup = styled.div`
+const StyledButtonsGroup = styled.div<{ stagger: number }>`
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 1.5rem 0;
-
+  --stagger: ${(props) => props.stagger};
   @media (min-width: ${breakpoints.md}) {
     flex-direction: row;
     flex-wrap: wrap;
