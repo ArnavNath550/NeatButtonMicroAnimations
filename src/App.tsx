@@ -9,7 +9,7 @@ function App() {
     <StyledContainer>
       <StyledContent basics-prose>
         <StyledContentHeading basics-text stagger={1} data-animate>
-          Neat Button Micro-Animations
+          <i data-fancy-italic>(Neat)</i> Button Micro-Animations
         </StyledContentHeading>
         <StyledContentDescription basics-text stagger={1.5} data-animate>
           I crafted these neat buttons with micro-animations in them, you can
